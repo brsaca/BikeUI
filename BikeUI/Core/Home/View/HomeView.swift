@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  BikeUI
 //
 //  Created by Brenda Saavedra Cantu on 13/10/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,6 +19,7 @@ struct ContentView: View {
     }
 }
 
+// MARK: - Previews
 #Preview {
-    ContentView()
+    HomeView()
 }
