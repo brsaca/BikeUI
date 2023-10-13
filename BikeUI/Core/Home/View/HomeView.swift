@@ -9,13 +9,40 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ZStack {
+                VStack {
+                    // NavBar
+                    NavBar
+                    
+                    // Promo
+                    
+                    // Filters
+                    
+                    // Grid Products
+                    
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 70)
+                .background(Color.background)
+                .edgesIgnoringSafeArea(.all)
+            }
         }
-        .padding()
+    }
+}
+
+extension HomeView {
+    var NavBar: some View {
+        HStack {
+            Text("Choose Your Bike")
+                .font(.poppins(.semibold, size: 20))
+                .foregroundStyle(.white)
+            
+            Spacer()
+            
+           // ButtonWithIcon(type: .square, image: "ellipsis", action: {})
+        }
     }
 }
 
