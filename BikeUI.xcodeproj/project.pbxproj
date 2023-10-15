@@ -22,6 +22,7 @@
 		4B7861F42AD9BD160094737B /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B7861EB2AD9BD160094737B /* Poppins-ExtraBold.ttf */; };
 		4B7861F52AD9BD160094737B /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B7861EC2AD9BD160094737B /* Poppins-Black.ttf */; };
 		4B7861F92AD9BE280094737B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7861F82AD9BE280094737B /* Font.swift */; };
+		4B7861FC2AD9C2BB0094737B /* SquareButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7861FB2AD9C2BB0094737B /* SquareButtonWithIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4B7861EC2AD9BD160094737B /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		4B7861F72AD9BD550094737B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4B7861F82AD9BE280094737B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		4B7861FB2AD9C2BB0094737B /* SquareButtonWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButtonWithIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		4B7861DC2AD9B0A00094737B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4B7861FA2AD9C29E0094737B /* Components */,
 				4B7861DE2AD9B0B10094737B /* Home */,
 				4B7861DF2AD9B0BF0094737B /* ProductDetail */,
 				4B7861E02AD9B0CB0094737B /* ShoppingCart */,
@@ -172,6 +175,14 @@
 				4B7861EA2AD9BD160094737B /* Poppins-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4B7861FA2AD9C29E0094737B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4B7861FB2AD9C2BB0094737B /* SquareButtonWithIcon.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				4B7861F92AD9BE280094737B /* Font.swift in Sources */,
 				4B7861CF2AD9A2390094737B /* HomeView.swift in Sources */,
 				4B7861CD2AD9A2390094737B /* BikeUIApp.swift in Sources */,
+				4B7861FC2AD9C2BB0094737B /* SquareButtonWithIcon.swift in Sources */,
 				4B7861E32AD9B1610094737B /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
