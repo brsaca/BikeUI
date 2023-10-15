@@ -35,10 +35,13 @@ struct HomeView: View {
                     Filters
                     
                     // Grid Products
+                    Products
                     
                     Spacer()
                 }
+                .padding(.top, 50)
                 .padding(.horizontal, 10)
+                .edgesIgnoringSafeArea(.all)
             }
         }
     }
@@ -58,46 +61,52 @@ extension HomeView {
     }
     
     var Promo: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            Image("bike1")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 285, height: 137)
-                .padding()
-            
-            Text("30% off")
-                .font(.poppins(.semibold, size: 26))
-                .foregroundStyle(.gray)
-                .padding(.leading, 20)
-                .padding(.bottom, 15)
-        }
-        .background(
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.blueContainer.opacity(0.4))
+            VStack(alignment: .leading, spacing: 15) {
+                Image("bike1")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 285, height: 137)
+                    .padding(.top, 40)
+                
+                Text("30% off")
+                    .font(.poppins(.semibold, size: 26))
+                    .foregroundStyle(.gray)
+                    .padding(.leading, 20)
+                    .padding(.bottom, 45)
             }
-        )
-        .frame(width: .infinity, height: 200)
-        .padding(.top, 100)
+            .frame(maxWidth: .infinity, maxHeight: 240)
+            .background(
+                Image("rectanglePromo")
+                    .resizable()
+                    .scaledToFill()
+            )
+            .padding(.top, 80)
+        
     }
     
     var Filters: some View {
         HStack(alignment: .bottom) {
             AllFilterButton
+            Spacer()
             
             SquareButtonWithIcon(type: .dark, image: "bike", action: {})
                 .padding(.bottom, 15)
+            Spacer()
             
             SquareButtonWithIcon(type: .dark, image: "road", action: {})
                 .padding(.bottom, 30)
+            Spacer()
             
             SquareButtonWithIcon(type: .dark, image: "mountain", action: {})
                 .padding(.bottom, 45)
+            Spacer()
             
             SquareButtonWithIcon(type: .dark, image: "halmet", action: {})
                 .padding(.bottom, 60)
         }
         .frame(width: .infinity, height: 150)
+        .padding(.top, -40)
+        .padding(.horizontal, 20)
     }
     
     var AllFilterButton: some View {
@@ -121,6 +130,15 @@ extension HomeView {
         }
     }
     
+    var Products: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                ForEach(0..<4, id: \.self) { index in
+                    CardItem(index: index)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Previews
