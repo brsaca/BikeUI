@@ -8,7 +8,15 @@
 import Foundation
 
 extension Double {
-    /// format a number in default two decimals
+    /**
+     Formats a numeric value as a currency string.
+
+     - Parameters:
+       - minFractionDigits: The minimum number of fraction digits to display (default is 2).
+       - maxFractionDigits: The maximum number of fraction digits to display (default is 2).
+
+     - Returns: A formatted currency string representation of the numeric value.
+     */
     func formatWithCurrency(minFractionDigits: Int = 2, maxFractionDigits: Int = 2) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
