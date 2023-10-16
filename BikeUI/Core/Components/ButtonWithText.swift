@@ -25,7 +25,7 @@ enum ButtonKind {
     var foregroundColor: Color {
         switch self {
         case .primaryAction, .secoundaryAction, .secoundaryOption: return .white.opacity(0.8)
-        case .primaryOption: return Color(red: 0.22, green: 0.71, blue: 0.91)
+        case .primaryOption: return Color.bBlueButton
         }
     }
     

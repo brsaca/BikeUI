@@ -109,14 +109,7 @@ extension ProductDetailView {
         }
         .frame(width: .infinity, height: 450)
         .background(
-            LinearGradient(
-                stops: [
-                    Gradient.Stop(color: Color(red: 0.21, green: 0.25, blue: 0.33), location: 0.00),
-                    Gradient.Stop(color: Color(red: 0.13, green: 0.16, blue: 0.2), location: 1.00),
-                ],
-                startPoint: UnitPoint(x: 0.02, y: 0.03),
-                endPoint: UnitPoint(x: 0.45, y: 0.38)
-            )
+            Color.gradientStopInfoBlue
         )
         .cornerRadius(20)
         .padding(.leading, -10)
@@ -126,7 +119,7 @@ extension ProductDetailView {
         HStack {
             Text(item.formattedAmount)
                 .font(.poppins(.regular, size: 24))
-              .foregroundColor(Color(red: 0.22, green: 0.71, blue: 0.91))
+                .foregroundColor(Color.bBlueText)
               .padding(.leading, 30)
               
             Spacer()
@@ -136,17 +129,10 @@ extension ProductDetailView {
         }
           .frame(width: .infinity, height: 104)
           .background(
-            LinearGradient(
-              stops: [
-                Gradient.Stop(color: Color(red: 0.21, green: 0.25, blue: 0.33), location: 0.00),
-                Gradient.Stop(color: Color(red: 0.13, green: 0.16, blue: 0.2), location: 1.00),
-              ],
-              startPoint: UnitPoint(x: 0.46, y: 0),
-              endPoint: UnitPoint(x: 0.47, y: 0.59)
-            )
+            Color.gradientStopBlue
           )
           .cornerRadius(50)
-          .shadow(color: Color(red: 0.11, green: 0.13, blue: 0.18).opacity(0.25), radius: 20, x: 0, y: -10)
+          .shadow(color: Color.shadowBlue, radius: 20, x: 0, y: -10)
           .overlay(
             RoundedRectangle(cornerRadius: 50)
               .inset(by: 1)
