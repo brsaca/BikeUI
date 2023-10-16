@@ -39,7 +39,6 @@ struct CustomTabBar: View {
                         Image(sectionOn == item ? item.imageOn : item.rawValue)
                             .scaledToFill()
                             .frame(width: 60, height: 60)
-                            //.frame(width: sectionOn == item ? 60 : 20, height: sectionOn == item ? 60 : 20)
                     }
                     .offset(y: sectionOn == item ? 20 : 40)
                     
