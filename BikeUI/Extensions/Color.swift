@@ -41,4 +41,5 @@ extension Color {
     static let bBlueButton = Color(red: 0.22, green: 0.71, blue: 0.91)
     static let bBlueTextField = Color(red: 0.14, green: 0.17, blue: 0.23)
     static let bWhiteOpacity8 = Color.white.opacity(0.8)
+    static let bGrayAmounts = Color.white.opacity(0.6)
 }
