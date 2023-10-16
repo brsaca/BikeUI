@@ -11,6 +11,7 @@ struct ProductDetailView: View {
     // MARK: View Properties
     let item: Item
     @State private var currentPage = 0
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack {
@@ -23,7 +24,6 @@ struct ProductDetailView: View {
             VStack {
                 // NavBar
                 NavBar
-                    .padding(.horizontal, 10)
                 
                 // Images Carrousel
                 Carrousel
@@ -45,16 +45,18 @@ struct ProductDetailView: View {
 extension ProductDetailView {
     var NavBar: some View {
         HStack {
-            SquareButtonWithIcon(type: .ligth, image: "chevron.left", action: {})
-            Spacer()
+            SquareButtonWithIcon(type: .ligth, image: "chevron.left", action: {
+                dismiss()
+            })
             
             Text(item.model)
                 .font(.poppins(.semibold, size: 20))
                 .foregroundStyle(.white)
+                .padding(.leading, 50)
             
             Spacer()
         }
-        .padding(.horizontal, 15)
+        .padding(.horizontal, 10)
     }
     
     var Carrousel: some View {

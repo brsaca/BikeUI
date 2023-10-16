@@ -61,26 +61,26 @@ extension HomeView {
     }
     
     var Promo: some View {
-            VStack(alignment: .leading, spacing: 15) {
-                Image("bike1")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 285, height: 137)
-                    .padding(.top, 40)
-                
-                Text("30% off")
-                    .font(.poppins(.semibold, size: 26))
-                    .foregroundStyle(.gray)
-                    .padding(.leading, 20)
-                    .padding(.bottom, 45)
-            }
-            .frame(maxWidth: .infinity, maxHeight: 240)
-            .background(
-                Image("rectanglePromo")
-                    .resizable()
-                    .scaledToFill()
-            )
-            .padding(.top, 80)
+        VStack(alignment: .leading, spacing: 15) {
+            Image("bike1")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 285, height: 137)
+                .padding(.top, 40)
+            
+            Text("30% off")
+                .font(.poppins(.semibold, size: 26))
+                .foregroundStyle(.gray)
+                .padding(.leading, 20)
+                .padding(.bottom, 45)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 240)
+        .background(
+            Image("rectanglePromo")
+                .resizable()
+                .scaledToFill()
+        )
+        .padding(.top, 80)
         
     }
     
@@ -134,7 +134,14 @@ extension HomeView {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                 ForEach(Item.MOCK_ITEMS.indices, id: \.self) { index in
-                    CardItem(item:Item.MOCK_ITEMS[index], index: index)
+                    let item = Item.MOCK_ITEMS[index]
+                    NavigationLink(
+                        destination: ProductDetailView(item: item).navigationBarBackButtonHidden(true),
+                        label: {
+                            CardItem(item: item, index: index)
+                        }
+                    )
+                    .tag(index)
                 }
             }
         }

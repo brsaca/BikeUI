@@ -32,7 +32,7 @@ struct CardItem: View {
                 
                 Image(item.image)
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
                     .frame(width: 130, height: 84)
                 
                 Text(item.name)
@@ -62,5 +62,5 @@ struct CardItem: View {
 }
 
 #Preview("light") {
-    CardItem(item: Item.MOCK_ITEMS[1], index: 1)
+    CardItem(item: Item.MOCK_ITEMS[2], index: 1)
 }
