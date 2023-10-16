@@ -41,7 +41,7 @@ struct ShoppingView: View {
             PriceDetails
             
             // Checkout
-            Spacer()
+            Checkout
         }
         .padding(.top, 70)
         .background(Color.background.opacity(0.98))
@@ -120,6 +120,26 @@ extension ShoppingView {
                     .foregroundColor(Color.bGrayAmounts)
             }
         }
+    }
+    
+    var Checkout: some View {
+        HStack {
+            SquareButtonWithIcon(type: .ligth, image: "chevron.left", action: {})
+                .rotationEffect(.degrees(180))
+            
+            Text("Checkout")
+                .font(.poppins(.medium, size: 18))
+                .foregroundStyle(Color.bWhiteOpacity8)
+                .padding(.horizontal, 10)
+        }
+        .background {
+            Rectangle()
+                .foregroundColor(.clear)
+                .background(Color.blueContainer)
+        }
+        
+        .cornerRadius(10)
+        .frame(width: 179, height: 50)
     }
 }
 
