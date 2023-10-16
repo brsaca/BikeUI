@@ -28,6 +28,7 @@
 		4B80590C2ADDB0DD0055985C /* ButtonWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80590B2ADDB0DD0055985C /* ButtonWithText.swift */; };
 		4B80590E2ADDB5ED0055985C /* LightButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80590D2ADDB5ED0055985C /* LightButtonModifier.swift */; };
 		4B8059102ADDB6C70055985C /* DarkButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80590F2ADDB6C70055985C /* DarkButtonModifier.swift */; };
+		4B8059122ADDC6B50055985C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8059112ADDC6B50055985C /* CustomTabBar.swift */; };
 		4B8537D52ADC6CDF0063A2A7 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D42ADC6CDF0063A2A7 /* CardItem.swift */; };
 		4B8537D72ADC79230063A2A7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D62ADC79230063A2A7 /* Item.swift */; };
 		4B8537D92ADC7DD60063A2A7 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D82ADC7DD60063A2A7 /* Double.swift */; };
@@ -57,6 +58,7 @@
 		4B80590B2ADDB0DD0055985C /* ButtonWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithText.swift; sourceTree = "<group>"; };
 		4B80590D2ADDB5ED0055985C /* LightButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButtonModifier.swift; sourceTree = "<group>"; };
 		4B80590F2ADDB6C70055985C /* DarkButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButtonModifier.swift; sourceTree = "<group>"; };
+		4B8059112ADDC6B50055985C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		4B8537D42ADC6CDF0063A2A7 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		4B8537D62ADC79230063A2A7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4B8537D82ADC7DD60063A2A7 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4B80590B2ADDB0DD0055985C /* ButtonWithText.swift */,
+				4B8059112ADDC6B50055985C /* CustomTabBar.swift */,
 				4B80590F2ADDB6C70055985C /* DarkButtonModifier.swift */,
 				4B80590D2ADDB5ED0055985C /* LightButtonModifier.swift */,
 				4B7861FB2AD9C2BB0094737B /* SquareButtonWithIcon.swift */,
@@ -314,6 +317,7 @@
 			files = (
 				4B80590A2ADD9A520055985C /* PageControl.swift in Sources */,
 				4B7861F92AD9BE280094737B /* Font.swift in Sources */,
+				4B8059122ADDC6B50055985C /* CustomTabBar.swift in Sources */,
 				4B7861CF2AD9A2390094737B /* HomeView.swift in Sources */,
 				4B8537D92ADC7DD60063A2A7 /* Double.swift in Sources */,
 				4B8537D52ADC6CDF0063A2A7 /* CardItem.swift in Sources */,
