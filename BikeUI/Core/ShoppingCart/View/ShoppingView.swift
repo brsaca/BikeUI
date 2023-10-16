@@ -21,6 +21,7 @@ struct ShoppingView: View {
             Products
             
             // Coupon
+            Coupon
             
             // Price
             
@@ -42,6 +43,14 @@ extension ShoppingView {
                     ShoppingItem(item: item)
                 }
             }
+        }
+    }
+    
+    var Coupon: some View {
+        VStack {
+            Text("Your Cart Qualifies For Free Delivery")
+                .font(.poppins(.medium, size: 15))
+                .foregroundColor(Color.bWhiteOpacity8)
         }
     }
 }
