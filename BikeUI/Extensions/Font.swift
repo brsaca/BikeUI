@@ -33,7 +33,16 @@ extension Font {
             }
         }
     }
-        
+
+    /**
+     Returns a custom Poppins font with the specified type and size.
+
+     - Parameters:
+       - type: The PoppinsFont type (e.g., .bold, .medium, .regular).
+       - size: The size of the font (default is 26 points).
+
+     - Returns: A custom `Font` with the specified Poppins type and size.
+     */
     static func poppins(_ type: PoppinsFont, size: CGFloat = 26) -> Font {
         return .custom(type.value, size: size)
     }
