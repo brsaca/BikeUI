@@ -42,6 +42,9 @@ struct HomeView: View {
                 .padding(.top, 50)
                 .padding(.horizontal, 10)
                 .edgesIgnoringSafeArea(.all)
+                
+                CustomTabBar()
+                    .offset(y: 330)
             }
         }
     }

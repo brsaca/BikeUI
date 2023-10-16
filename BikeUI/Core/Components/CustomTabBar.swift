@@ -43,8 +43,11 @@ struct CustomTabBar: View {
                     }
                     .offset(y: sectionOn == item ? 20 : 40)
                     
-                    Spacer()
+                    if item != .doc {
+                        Spacer()
+                    }
                 }
+                Spacer()
             }
         }
     }
