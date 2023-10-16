@@ -84,9 +84,9 @@ extension ProductDetailView {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
                 Spacer()
-                ButtonWithText(title: "Description", kind: .primaryOption)
+                ButtonWithText(title: "Description", kind: .primaryOption, action: {})
                 Spacer()
-                ButtonWithText(title: "Suscription", kind: .secoundaryOption)
+                ButtonWithText(title: "Suscription", kind: .secoundaryOption, action: {})
                 Spacer()
             }
             .padding(.vertical, 20)
@@ -124,7 +124,7 @@ extension ProductDetailView {
               
             Spacer()
             
-            ButtonWithText(title: "Add To Cart", kind: .secoundaryAction)
+            ButtonWithText(title: "Add To Cart", kind: .secoundaryAction, action: {})
                 .padding(.trailing, 30)
         }
           .frame(width: .infinity, height: 104)

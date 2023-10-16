@@ -35,21 +35,26 @@ struct ButtonWithText: View {
     //MARK: View Properties
     let title: String
     let kind: ButtonKind
+    let action: () -> Void
     
     var body: some View {
-        switch kind {
-        case .primaryAction, .secoundaryAction:
-             Button
-                .modifier(LightButtonModifier())
-        case .primaryOption, .secoundaryOption:
-             Button
-                .modifier(DarkButtonModifier())
+        Button {
+            action()
+        } label: {
+            switch kind {
+            case .primaryAction, .secoundaryAction:
+                ButtonDesign
+                    .modifier(LightButtonModifier())
+            case .primaryOption, .secoundaryOption:
+                ButtonDesign
+                    .modifier(DarkButtonModifier())
+            }
         }
     }
 }
 
 extension ButtonWithText {
-    var Button: some View {
+    var ButtonDesign: some View {
         HStack(alignment: .center, spacing: 10) {
             Text(title)
                 .font(kind.font)
@@ -57,22 +62,25 @@ extension ButtonWithText {
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
+        .onTapGesture {
+            action()
+        }
     }
 }
 
 // MARK: - Previews
 #Preview("primaryAction") {
-    ButtonWithText(title: "Apply", kind: .primaryAction)
+    ButtonWithText(title: "Apply", kind: .primaryAction, action: {})
 }
 
 #Preview("secoundaryAction") {
-    ButtonWithText(title: "Add To Cart", kind: .secoundaryAction)
+    ButtonWithText(title: "Add To Cart", kind: .secoundaryAction, action: {})
 }
 
 #Preview("primaryOption") {
-    ButtonWithText(title: "Description", kind: .primaryOption)
+    ButtonWithText(title: "Description", kind: .primaryOption, action: {})
 }
 
 #Preview("secoundaryOption") {
-    ButtonWithText(title: "Suscription", kind: .secoundaryOption)
+    ButtonWithText(title: "Suscription", kind: .secoundaryOption, action: {})
 }
