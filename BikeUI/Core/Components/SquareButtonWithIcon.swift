@@ -13,17 +13,16 @@ enum TypeButton {
     case gradient
 }
 
-/// Square Buttons
-///
-/// How to use it.
-/// ```
-/// SquareButtonWithIcon(type:.ligth, image: "search", action: {})
-/// ```
-/// - Parameter
-///   - type: .dark / .ligth
-///   - image: String Image name from symbols
-///   - action: call ontap
-///
+/**
+ A button with an icon and specified type.
+
+ - Parameters:
+   - type: The type of the button (light or dark).
+   - image: The name of the image to be used as the button icon.
+   - action: The action to be performed when the button is tapped.
+
+ - Returns: A button with the specified icon and type.
+ */
 struct SquareButtonWithIcon: View {
     // MARK: View Properties
     let type: TypeButton
