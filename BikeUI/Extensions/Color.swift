@@ -39,6 +39,5 @@ extension Color {
     static let background = Color("blueBackground")
     static let bBlueText = Color("blueText")
     static let bBlueButton = Color(red: 0.22, green: 0.71, blue: 0.91)
+    static let bBlueTextField = Color(red: 0.14, green: 0.17, blue: 0.23)
 }
-
-
