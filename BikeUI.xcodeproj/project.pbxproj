@@ -29,6 +29,8 @@
 		4B80590E2ADDB5ED0055985C /* LightButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80590D2ADDB5ED0055985C /* LightButtonModifier.swift */; };
 		4B8059102ADDB6C70055985C /* DarkButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80590F2ADDB6C70055985C /* DarkButtonModifier.swift */; };
 		4B8059122ADDC6B50055985C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8059112ADDC6B50055985C /* CustomTabBar.swift */; };
+		4B8059152ADDD1310055985C /* ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8059142ADDD1310055985C /* ShoppingView.swift */; };
+		4B8059172ADDD1DB0055985C /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8059162ADDD1DB0055985C /* CustomNavBar.swift */; };
 		4B8537D52ADC6CDF0063A2A7 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D42ADC6CDF0063A2A7 /* CardItem.swift */; };
 		4B8537D72ADC79230063A2A7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D62ADC79230063A2A7 /* Item.swift */; };
 		4B8537D92ADC7DD60063A2A7 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D82ADC7DD60063A2A7 /* Double.swift */; };
@@ -59,6 +61,8 @@
 		4B80590D2ADDB5ED0055985C /* LightButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButtonModifier.swift; sourceTree = "<group>"; };
 		4B80590F2ADDB6C70055985C /* DarkButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButtonModifier.swift; sourceTree = "<group>"; };
 		4B8059112ADDC6B50055985C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		4B8059142ADDD1310055985C /* ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingView.swift; sourceTree = "<group>"; };
+		4B8059162ADDD1DB0055985C /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		4B8537D42ADC6CDF0063A2A7 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		4B8537D62ADC79230063A2A7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4B8537D82ADC7DD60063A2A7 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		4B7861E02AD9B0CB0094737B /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
+				4B8059132ADDD1240055985C /* View */,
 			);
 			path = ShoppingCart;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				4B80590B2ADDB0DD0055985C /* ButtonWithText.swift */,
+				4B8059162ADDD1DB0055985C /* CustomNavBar.swift */,
 				4B8059112ADDC6B50055985C /* CustomTabBar.swift */,
 				4B80590F2ADDB6C70055985C /* DarkButtonModifier.swift */,
 				4B80590D2ADDB5ED0055985C /* LightButtonModifier.swift */,
@@ -226,6 +232,14 @@
 				4B8059092ADD9A520055985C /* PageControl.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		4B8059132ADDD1240055985C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B8059142ADDD1310055985C /* ShoppingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4B8537D32ADC6CCA0063A2A7 /* Components */ = {
@@ -317,9 +331,11 @@
 			files = (
 				4B80590A2ADD9A520055985C /* PageControl.swift in Sources */,
 				4B7861F92AD9BE280094737B /* Font.swift in Sources */,
+				4B8059172ADDD1DB0055985C /* CustomNavBar.swift in Sources */,
 				4B8059122ADDC6B50055985C /* CustomTabBar.swift in Sources */,
 				4B7861CF2AD9A2390094737B /* HomeView.swift in Sources */,
 				4B8537D92ADC7DD60063A2A7 /* Double.swift in Sources */,
+				4B8059152ADDD1310055985C /* ShoppingView.swift in Sources */,
 				4B8537D52ADC6CDF0063A2A7 /* CardItem.swift in Sources */,
 				4B7861CD2AD9A2390094737B /* BikeUIApp.swift in Sources */,
 				4B80590C2ADDB0DD0055985C /* ButtonWithText.swift in Sources */,

@@ -23,7 +23,8 @@ struct ProductDetailView: View {
             
             VStack {
                 // NavBar
-                NavBar
+                CustomNavBar(title: item.model)
+                    .padding(.trailing, 40)
                 
                 // Images Carrousel
                 Carrousel
@@ -43,22 +44,6 @@ struct ProductDetailView: View {
 }
 
 extension ProductDetailView {
-    var NavBar: some View {
-        HStack {
-            SquareButtonWithIcon(type: .ligth, image: "chevron.left", action: {
-                dismiss()
-            })
-            
-            Text(item.model)
-                .font(.poppins(.semibold, size: 20))
-                .foregroundStyle(.white)
-                .padding(.leading, 50)
-            
-            Spacer()
-        }
-        .padding(.horizontal, 10)
-    }
-    
     var Carrousel: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false){
