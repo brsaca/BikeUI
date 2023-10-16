@@ -11,35 +11,38 @@ struct ProductDetailView: View {
     // MARK: View Properties
     let item: Item
     @State private var currentPage = 0
+    @State private var isShoppingViewPresented = false
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        ZStack {
-            Image("rectangle")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-                .offset(x: 30, y:-80)
-            
-            VStack {
-                // NavBar
-                CustomNavBar(title: item.model)
-                    .padding(.trailing, 40)
+        NavigationView {
+            ZStack {
+                Image("rectangle")
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+                    .offset(x: 30, y:-80)
                 
-                // Images Carrousel
-                Carrousel
-                
-                // Details
-                Information
-                
-                // Add To Cart
-                
-                Spacer()
+                VStack {
+                    // NavBar
+                    CustomNavBar(title: item.model)
+                        .padding(.trailing, 40)
+                    
+                    // Images Carrousel
+                    Carrousel
+                    
+                    // Details
+                    Information
+                    
+                    // Add To Cart
+                    
+                    Spacer()
+                }
             }
+            .padding(.top, 70)
+            .background(Color.background)
+            .edgesIgnoringSafeArea(.all)
         }
-        .padding(.top, 70)
-        .background(Color.background)
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -111,8 +114,13 @@ extension ProductDetailView {
               
             Spacer()
             
-            ButtonWithText(title: "Add To Cart", kind: .secoundaryAction, action: {})
+            ButtonWithText(title: "Add To Cart", kind: .secoundaryAction, action: {
+                isShoppingViewPresented.toggle()
+            })
                 .padding(.trailing, 30)
+                .fullScreenCover(isPresented: $isShoppingViewPresented, content: {
+                    ShoppingView()
+                })
         }
           .frame(width: .infinity, height: 104)
           .background(
