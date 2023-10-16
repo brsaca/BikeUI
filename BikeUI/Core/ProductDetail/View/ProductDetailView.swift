@@ -23,19 +23,19 @@ struct ProductDetailView: View {
             VStack {
                 // NavBar
                 NavBar
+                    .padding(.horizontal, 10)
                 
                 // Images Carrousel
                 Carrousel
                 
                 // Details
-                
+                Information
                 
                 // Add To Cart
                 
                 Spacer()
             }
         }
-        .padding(.horizontal, 10)
         .padding(.top, 70)
         .background(Color.background)
         .edgesIgnoringSafeArea(.all)
@@ -78,6 +78,68 @@ extension ProductDetailView {
                             .padding(.top, 8)
         }
         .padding(.top, 30)
+    }
+    
+    var Information: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            HStack {
+                HStack(alignment: .center, spacing: 10) {
+                    Text("Description")
+                        .font(.poppins(.bold, size: 18))
+                        .foregroundColor(Color(red: 0.22, green: 0.71, blue: 0.91))
+                }
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(Color(red: 0.21, green: 0.25, blue: 0.33))
+                .cornerRadius(10)
+                .shadow(color: .black.opacity(0.25), radius: 5, x: 4, y: 4)
+                .shadow(color: .white.opacity(0.25), radius: 5, x: -4, y: -4)
+                
+                Spacer()
+                
+                HStack(alignment: .center, spacing: 10) {
+                    Text("Suscription")
+                        .font(.poppins(.regular, size: 18))
+                        .foregroundColor(.white.opacity(0.8))
+                }
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
+                .background(Color(red: 0.21, green: 0.25, blue: 0.33))
+                .cornerRadius(10)
+                .shadow(color: .black.opacity(0.25), radius: 5, x: 4, y: 4)
+                .shadow(color: .white.opacity(0.25), radius: 5, x: -4, y: -4)
+            }
+            Spacer()
+        }
+        .frame(width: .infinity, height: 450)
+        .cornerRadius(20)
+       /* .background(
+          LinearGradient(
+            stops: [
+              Gradient.Stop(color: Color(red: 0.21, green: 0.25, blue: 0.33), location: 0.00),
+              Gradient.Stop(color: Color(red: 0.13, green: 0.16, blue: 0.2), location: 1.00),
+            ],
+            startPoint: UnitPoint(x: 0.02, y: 0.03),
+            endPoint: UnitPoint(x: 0.45, y: 0.38)
+          )
+        ) */
+        .padding(.leading, -10)
+    }
+    
+    var Information2: some View {
+        Rectangle()
+          .frame(width: .infinity, height: 450)
+          .background(
+            LinearGradient(
+              stops: [
+                Gradient.Stop(color: Color(red: 0.21, green: 0.25, blue: 0.33), location: 0.00),
+                Gradient.Stop(color: Color(red: 0.13, green: 0.16, blue: 0.2), location: 1.00),
+              ],
+              startPoint: UnitPoint(x: 0.02, y: 0.03),
+              endPoint: UnitPoint(x: 0.45, y: 0.38)
+            )
+          )
+          .cornerRadius(20)
     }
 }
 
