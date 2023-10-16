@@ -133,8 +133,8 @@ extension HomeView {
     var Products: some View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
-                ForEach(0..<4, id: \.self) { index in
-                    CardItem(index: index)
+                ForEach(Item.MOCK_ITEMS.indices, id: \.self) { index in
+                    CardItem(item:Item.MOCK_ITEMS[index], index: index)
                 }
             }
         }

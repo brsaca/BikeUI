@@ -24,6 +24,8 @@
 		4B7861F92AD9BE280094737B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7861F82AD9BE280094737B /* Font.swift */; };
 		4B7861FC2AD9C2BB0094737B /* SquareButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7861FB2AD9C2BB0094737B /* SquareButtonWithIcon.swift */; };
 		4B8537D52ADC6CDF0063A2A7 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D42ADC6CDF0063A2A7 /* CardItem.swift */; };
+		4B8537D72ADC79230063A2A7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D62ADC79230063A2A7 /* Item.swift */; };
+		4B8537D92ADC7DD60063A2A7 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8537D82ADC7DD60063A2A7 /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		4B7861F82AD9BE280094737B /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		4B7861FB2AD9C2BB0094737B /* SquareButtonWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButtonWithIcon.swift; sourceTree = "<group>"; };
 		4B8537D42ADC6CDF0063A2A7 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		4B8537D62ADC79230063A2A7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4B8537D82ADC7DD60063A2A7 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		4B7861DA2AD9B08C0094737B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B8537D62ADC79230063A2A7 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4B7861E22AD9B1610094737B /* Color.swift */,
+				4B8537D82ADC7DD60063A2A7 /* Double.swift */,
 				4B7861F82AD9BE280094737B /* Font.swift */,
 			);
 			path = Extensions;
@@ -277,8 +283,10 @@
 			files = (
 				4B7861F92AD9BE280094737B /* Font.swift in Sources */,
 				4B7861CF2AD9A2390094737B /* HomeView.swift in Sources */,
+				4B8537D92ADC7DD60063A2A7 /* Double.swift in Sources */,
 				4B8537D52ADC6CDF0063A2A7 /* CardItem.swift in Sources */,
 				4B7861CD2AD9A2390094737B /* BikeUIApp.swift in Sources */,
+				4B8537D72ADC79230063A2A7 /* Item.swift in Sources */,
 				4B7861FC2AD9C2BB0094737B /* SquareButtonWithIcon.swift in Sources */,
 				4B7861E32AD9B1610094737B /* Color.swift in Sources */,
 			);

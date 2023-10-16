@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardItem: View {
     // MARK: View Properties
+    let item: Item
     let index: Int
     
     private var isPar: Bool {
@@ -23,26 +24,26 @@ struct CardItem: View {
             .frame(width: 165, height: 240)
             
             VStack(alignment: .leading) {
-                Image("heart-filled")
+                Image(isPar ? "heart-filled" : "heart")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 24, height: 24)
                     .offset(x:110)
                 
-                Image("bike1")
+                Image(item.image)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 130, height: 84)
                 
-                Text("Road Bike")
+                Text(item.name)
                     .font(.poppins(.medium, size: 13))
                     .foregroundStyle(.white.opacity(0.6))
 
-                Text("PEUGEOT - LR01")
+                Text(item.model)
                     .font(.poppins(.bold, size: 15))
                     .foregroundStyle(.white)
                 
-                Text("$1,999.99")
+                Text(item.formattedAmount)
                     .font(.poppins(.medium, size: 13))
                     .foregroundColor(.white.opacity(0.6))
                 
@@ -57,9 +58,9 @@ struct CardItem: View {
 
 // MARK: - Previews
 #Preview("dark") {
-    CardItem(index: 0)
+    CardItem(item: Item.MOCK_ITEMS[0], index: 0)
 }
 
 #Preview("light") {
-    CardItem(index: 1)
+    CardItem(item: Item.MOCK_ITEMS[1], index: 1)
 }
