@@ -26,9 +26,19 @@ extension Color {
         startPoint: UnitPoint(x: 0.02, y: 0.03),
         endPoint: UnitPoint(x: 0.45, y: 0.38)
     )
+    static let gradientStopButtons = LinearGradient(
+        stops: [
+        Gradient.Stop(color: Color(red: 0.22, green: 0.71, blue: 0.91), location: 0.00),
+        Gradient.Stop(color: Color(red: 0.29, green: 0.3, blue: 0.93), location: 1.00),
+        ],
+        startPoint: UnitPoint(x: -0.33, y: 0.13),
+        endPoint: UnitPoint(x: 0.9, y: 0.82)
+        )
     static let shadowBlue = Color(red: 0.11, green: 0.13, blue: 0.18).opacity(0.25)
     static let bBlueContainer = Color("blueContainer")
     static let background = Color("blueBackground")
     static let bBlueText = Color("blueText")
     static let bBlueButton = Color(red: 0.22, green: 0.71, blue: 0.91)
 }
+
+
